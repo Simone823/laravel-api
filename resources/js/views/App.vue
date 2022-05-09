@@ -4,9 +4,9 @@
     <div id="app" class="bg-stone-800 text-white">
 
         <!-- Header nav -->
-        <header class="py-4 px-4 mb-8">
-            <nav>
-                <ul>
+        <header class="py-8 px-4 mb-4">
+            <nav class="nav-menu">
+                <ul class="flex items-center justify-center gap-8">
                     <li>Home</li>
                     <li>Posts</li>
                     <li>Categories</li>
