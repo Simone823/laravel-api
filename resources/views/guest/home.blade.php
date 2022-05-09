@@ -14,6 +14,20 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
+    {{-- Link tailwind --}}
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d'
+                    , }
+                }
+            }
+        }
+    </script>
+
     {{-- Link front css --}}
     <link rel="stylesheet" href="{{asset('css/front.css')}}">
     
