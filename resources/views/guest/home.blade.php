@@ -21,8 +21,12 @@
             theme: {
                 extend: {
                     colors: {
-                        clifford: '#da373d'
-                    , }
+                        clifford: '#da373d', 
+                    },
+
+                    container: {
+                        center: true,
+                    },
                 }
             }
         }
