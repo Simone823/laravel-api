@@ -16,7 +16,10 @@ class PostController extends Controller
     public function index()
     {
         // Recupero tutti i post dal db con categorie e tags
-        $posts = Post::with(['category', 'tags'])->limit(12)->get();
+        $posts = Post::with(['category', 'tags'])
+        ->where('publication_date', '!=', null)
+        ->orderBy('publication_date', 'DESC')
+        ->paginate(12);
 
         // Return response json posts
         return response()->json([
