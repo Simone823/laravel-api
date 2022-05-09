@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\HomeController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,5 +43,10 @@ Route::middleware('auth')->namespace('Admin')->prefix('admin')->name('admin.')->
 
     // Rotta tags
     Route::resource('/tags', 'TagController');
+});
+
+// Route fallback posts guest home
+Route::fallback(function () {
+    return view('guest.home');
 });
 
