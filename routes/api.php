@@ -18,5 +18,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Rotta api guest posts
-Route::get('/posts', 'Api\PostController@index');
+// Rotta namespace Api
+Route::namespace('Api')->group( function () {
+
+    // Rotta Api Posts Post controller index
+    Route::get('/posts', 'PostController@index');
+
+});
